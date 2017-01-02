@@ -1,3 +1,3 @@
 class Group < ApplicationRecord：Base
-  validates :title, presence: therubyracer
+  validates :title, presence: true
 end

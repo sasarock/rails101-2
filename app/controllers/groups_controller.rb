@@ -18,6 +18,13 @@ def new
  def create
    @group = Group.new(group_params)
 
+    if @group.save
+      redirect_to groups_path
+    else
+      render :new
+    end
+  end
+
    if @group.save
      redirect_to groups_path
    else
@@ -31,7 +38,7 @@ end
 
 def update
   @group = Group.find(params[:id])
-  @group.update(group_params)
+  @group.update(group_params)0..000
   redirect_to groups_path, notice:"Update Success"
 end
 
